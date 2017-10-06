@@ -1,0 +1,11 @@
+version: '2' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  app-server: # name of the first service
+    build: server # specify the directory of the Dockerfile
+    container_name: my-app-server
+    ports:
+      - "2111:3000" # specify port forewarding
+    volumes:
+      - "./server:/usr/src/app"
