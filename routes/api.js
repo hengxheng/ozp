@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const product = require('../fetchProduct.js');
-const category = require('../fetchCategory.js');
+const product = require('./fetchProduct.js');
+const category = require('./fetchCategory.js');
 
 router.use(function(req, res, next) {
     // do logging

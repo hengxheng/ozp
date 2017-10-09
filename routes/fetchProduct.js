@@ -1,5 +1,5 @@
 const axios = require("axios"); // fetch json data, support promises and parallel request
-const config = require("./config");
+const config = require("../config");
 
 // test product code: PZELUV
 // test category id: 29962

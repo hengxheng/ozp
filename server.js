@@ -7,16 +7,15 @@ const morgan = require('morgan');
 const cors = require('cors');
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
-// Get our API routes
 const api = require('./routes/api');
 
 const app = express();
-app.use(cors());
-if(process.env.NODE_ENV !== 'test'){
-  app.use(morgan('combined')); //'combined' outputs the Apache style LOGs
-};
 
-// Parsers for POST data
+app.use(cors());
+// if(process.env.NODE_ENV !== 'test'){
+  app.use(morgan('combined')); //'combined' outputs the Apache style LOGs
+// };
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -56,9 +55,6 @@ if (isDeveloping) {
     app.use(express.static(staticPath));
 }
 
-/**
- * Get port from environment and store in Express.
- */
 const port = process.env.PORT || '3000';
 app.set('port', port);
 
@@ -67,9 +63,6 @@ app.set('port', port);
  */
 const server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
 server.listen(port, () => console.log(`API running on localhost:${port}`));
 
 module.exports = app;  // for testing

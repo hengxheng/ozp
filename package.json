@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --timeout 10000",
     "start": "webpack && nodemon index.js",
-    "server": "nodemon index.js",
+    "server": "nodemon --inspect --debug-brk index.js",
     "react-test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive ./test",
     "tdd": "npm test -- --watch"
   },
