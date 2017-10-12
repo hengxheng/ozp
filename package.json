@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --timeout 10000",
+    "test": "mocha --require babel-register --timeout 10000",
     "start": "webpack && nodemon index.js",
     "server": "nodemon --inspect --debug-brk index.js",
     "react-test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive ./test",
@@ -18,6 +18,7 @@
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.4",
+    "mongoose": "^4.12.1",
     "morgan": "^1.8.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

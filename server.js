@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors());
 // if(process.env.NODE_ENV !== 'test'){
-  app.use(morgan('combined')); //'combined' outputs the Apache style LOGs
+  // app.use(morgan('combined')); //'combined' outputs the Apache style LOGs
 // };
 
 app.use(bodyParser.json());

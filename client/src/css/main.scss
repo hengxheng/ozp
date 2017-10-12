@@ -47,6 +47,7 @@ body{
   // background-size: cover;
 }
 a{
+  color: #fff;
   text-decoration: none;
 }
 
@@ -112,4 +113,20 @@ nav#site-navigation{
 .flex-container{
   display: flex;
   justify-content: space-between;
+}
+
+.single-category{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .product-box{
+    width: 33%;
+    .product-name{
+      font-size: 20px;
+      color:#fff;
+    }
+    img{
+      width: 100%;
+    }
+  }
 }

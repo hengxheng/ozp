@@ -4,13 +4,8 @@ const config = require("../config");
 // test product code: PZELUV
 // test category id: 29962
 const getProduct = (res, productCode="") => {
-    let url = "";
-    if(productCode === ""){
-        url = `https://api.rezdy.com/v1/products?apiKey=${config.Api_key}`;
-    }
-    else{
-        url = `https://api.rezdy.com/v1/products/${productCode}?apiKey=${config.Api_key}`;
-    }
+    let url = `https://api.rezdy.com/v1/products/${productCode}?apiKey=${config.Api_key}`;
+
 
     axios.get(url, {
         headers: {
@@ -21,13 +16,27 @@ const getProduct = (res, productCode="") => {
     .then(response => {
         if(response.data.requestStatus.success){
             res.setHeader('Content-Type', 'application/json');
-            if(productCode === ""){
-                res.json(response.data.products);
-            }
-            else{
-                res.json(response.data.product);
-            }
+            res.json(response.data.product);
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
 
+const getProducts = (res, productCode="") => {
+    
+    let url = `https://api.rezdy.com/v1/products?apiKey=${config.Api_key}`;
+    axios.get(url, {
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if(response.data.requestStatus.success){
+            res.setHeader('Content-Type', 'application/json');
+            res.json(response.data.products);
         }
     })
     .catch(error => {

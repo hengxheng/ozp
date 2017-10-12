@@ -13,7 +13,7 @@ export default class SingleClass extends React.Component{
     }
     componentDidMount(){
         let id = this.props.match.params.id;
-        axios.get(`${ config.api_url}/api/category/product/${ id }`)
+        axios.get(`/api/category/product/${ id }`)
         .then(result => {
             this.setState( { products: result.data} ); 
         });

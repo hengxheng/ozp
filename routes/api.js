@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const product = require('./fetchProduct.js');
-const category = require('./fetchCategory.js');
+const product = require('./product.js');
+const category = require('./category.js');
 
 router.use(function(req, res, next) {
     // do logging
@@ -23,7 +23,7 @@ router.get('/product/:productcode', (req, res) => {
 });
 
 router.get('/category', (req, res)=>{
-    category.getCategory(res, "");
+    category.getCategories(req, res);
 });
 
 router.get('/category/:categoryId', (req, res) => {
