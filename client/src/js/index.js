@@ -16,7 +16,7 @@ ReactDOM.render((
     <Provider store={ store }>
         <HashRouter>
             <App>
-                <div>React is here</div>
+                <div>OP is here</div>
             </App>
         </HashRouter>
     </Provider>

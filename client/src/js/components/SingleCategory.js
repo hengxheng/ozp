@@ -3,7 +3,7 @@ import config from "../app_config";
 import axios from "axios";
 import { ProductBox } from "./product_box";
 
-export default class SingleClass extends React.Component{
+export default class singleCategory extends React.Component{
     constructor(){
         super();
         this.state = { 
