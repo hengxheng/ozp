@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const product = require('./product.js');
-const category = require('./category.js');
+import { getProduct, getProducts, getProductByCategory } from './product';
+import { getCategory, getCategories } from './category';
 
 router.use(function(req, res, next) {
     // do logging
@@ -15,23 +15,23 @@ router.get('/', (req, res) => {
 });
 
 router.get('/product', (req, res)=>{
-    product.getProduct(res, "");
+    getProduct(res, "");
 });
 
 router.get('/product/:productcode', (req, res) => {
-    product.getProduct(res, req.params.productcode);
+    getProduct(res, req.params.productcode);
 });
 
 router.get('/category', (req, res)=>{
-    category.getCategories(req, res);
+    getCategories(req, res);
 });
 
 router.get('/category/:categoryId', (req, res) => {
-    category.getCategory(res, req.params.categoryId);
+    getCategory(res, req.params.categoryId);
 });
 
 router.get('/category/product/:categoryId', (req, res) => {
-    product.getProductByCategory(res, req.params.categoryId);
+    getProductByCategory(res, req.params.categoryId);
 });
 
 
