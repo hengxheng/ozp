@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-
+import { renderRoutes } from 'react-router-config';
 import { Header } from "../components/sections/header";
 import { Navigation } from "../components/sections/navigation";
 import Routes from "../routes";
@@ -21,7 +21,7 @@ class App extends React.Component {
                      <Navigation menuState={ this.props.menu.showMenu } /> 
                 </div>
                 <div className="page-content">
-                    <Routes/>
+                    { renderRoutes( this.props.route.routes )}
                 </div> 
             </div>
         );

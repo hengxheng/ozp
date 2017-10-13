@@ -23,7 +23,7 @@ export default class Category extends React.Component {
                 <h3>Category</h3>
                 <ul>
                     { this.state.categories.map( (category, i) => {
-                        return <li key={i}><Link to={ `${routeCodes.CATEGORY}/${category.id}` }>{ category.name }</Link></li>
+                        return <li key={i}><Link to={ `/category/${category.id}` }>{ category.name }</Link></li>
                     })}
                 </ul>
             </div>
