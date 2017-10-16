@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --require babel-register --timeout 10000",
+    "test": "mocha --require babel-register --timeout 30000",
     "start": "webpack && nodemon index.js",
     "server": "nodemon --inspect --debug-brk index.js",
     "react-test": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive ./test",

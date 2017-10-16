@@ -1,6 +1,6 @@
 process.env.NODE_ENV = 'test';
 
-const product = require('../routes/fetchProduct.js');
+const product = require('../routes/product.js');
 const server = require('../server');
 
 const chai = require('chai');
