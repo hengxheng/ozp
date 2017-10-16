@@ -20,7 +20,7 @@ export const routes = [
                 component: Category
             },
             {
-                path: '/product',
+                path: '/product/:code',
                 exact: true,
                 component: Product
             },

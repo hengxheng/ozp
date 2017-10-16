@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ProductBox = (props) => {
     let productImage = (<div className="product-img"></div>);
@@ -7,9 +8,11 @@ export const ProductBox = (props) => {
     }
     
     return (
+        <Link to={ `/product/${props.product.id}` }>
         <div id={ props.product.id }className="product-box">
             <div className="product-name">{ props.product.name }</div>
             { productImage }
         </div>
+        </Link>
     );
 }

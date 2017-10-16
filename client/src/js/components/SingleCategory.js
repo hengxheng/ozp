@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import config from "../app_config";
 import axios from "axios";
 import { ProductBox } from "./product_box";
@@ -18,6 +19,8 @@ export default class singleCategory extends React.Component{
             this.setState( { products: result.data} ); 
         });
     }
+
+
     render() {
         return (  
             <div id={ this.props.match.params.id } className="single-category">

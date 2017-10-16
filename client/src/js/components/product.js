@@ -1,11 +1,34 @@
 import React from "react";
 import config from "../app_config";
+import axios from "axios";
 
 export default class Product extends React.Component {
+    constructor(){
+        super();
+        this.state = { product: {} }
+    }
+
+    componentDidMount(){
+        let code = this.props.match.params.code;
+        axios.get(`/api/product/${code}`)
+        .then(result => {
+            this.setState( { product: result.data } ); 
+        });
+    }
+
+    createRawHTML(){
+        return { __html: this.state.product.description }
+    }
+    
     render() {
         return (
-            <div>
-                <h3>Product</h3>
+            <div className="product-block">
+                <h1>{ this.state.product.name }</h1>
+                <div className="product-descript" dangerouslySetInnerHTML={ this.createRawHTML() } />
+                <div className="product-terms">
+                    <h2>Terms</h2>
+                    { this.state.product.terms }
+                </div>
             </div>
         );
     }
