@@ -75,7 +75,14 @@ footer#site-footer{
     align-items: flex-start;
     padding: 30px 0;
     .footer-left{
-      width: 210px;
+      width: 285px;
+      p{
+        font-family: 'Gotham-Bold';
+        font-size: 18px;
+        span{
+          color: $yellow;
+        }
+      }
     }
     .footer-right{
       display: flex;
@@ -83,12 +90,12 @@ footer#site-footer{
       justify-content: space-around;
       align-items: flex-start;
       margin-left: auto;
-      width: 70%;
+      width: 73%;
       .footer-col{
-        width: 150px;
+        width: 160px;
         font-size: 13px;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 0 10px 0 20px;
         position: relative;
         &:before{
           content:"";
@@ -98,7 +105,7 @@ footer#site-footer{
           display:block;
           height: 125px;
           width: 1px;
-          background: $light-grey;
+          background: #818181;
         }
         &:first-child{
           &:before{
