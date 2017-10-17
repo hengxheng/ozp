@@ -20,7 +20,6 @@ export default class singleCategory extends React.Component{
         });
     }
 
-
     render() {
         return (  
             <div id={ this.props.match.params.id } className="single-category">

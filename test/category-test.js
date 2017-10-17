@@ -23,6 +23,7 @@ describe('Categories', () => {
                 }   
                 expect(res).have.status(200);
                 expect(res.body).be.a('array');
+                done();
             });
         }); 
     });

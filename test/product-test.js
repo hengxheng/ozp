@@ -22,9 +22,8 @@ describe('Products', () => {
                 expect(res).have.status(200);
                 expect(res.body).be.a('object');
                 // expect(res.body).length.be.eql(0);
-                expect(res.body).have.property('productType');
                 expect(res.body).have.property('productCode').eql('PZELUV');
-            done();
+                done();
             });
        });
     });

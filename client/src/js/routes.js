@@ -15,6 +15,11 @@ export const routes = [
                 component: Home
             },
             {
+                path: '/home',
+                exact: true,
+                component: Home
+            },
+            {
                 path: '/category',
                 exact: true,
                 component: Category
