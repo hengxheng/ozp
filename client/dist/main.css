@@ -1,10 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Muli);.site-inner {
+.site-inner {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box; }
   @media screen and (max-width: 1200px) {
     .site-inner {
+      width: 100%; } }
+
+.big-site-inner {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box; }
+  @media screen and (max-width: 1400px) {
+    .big-site-inner {
       width: 100%; } }
 
 .clear {
@@ -35,24 +44,6 @@
     background-color: #333333;
     transition: background-color 0.5s ease-in; }
 
-@font-face {
-  font-family: 'Gotham-Medium';
-  src: url(/clientfonts/Gotham-Medium.eot?#iefix) format("embedded-opentype"), url(/clientfonts/Gotham-Medium.woff) format("woff"), url(/clientfonts/Gotham-Medium.ttf) format("truetype"), url(/clientfonts/Gotham-Medium.svg#Gotham-Medium) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Gotham-Light';
-  src: url(/clientfonts/Gotham-Light.eot?#iefix) format("embedded-opentype"), url(/clientfonts/Gotham-Light.woff) format("woff"), url(/clientfonts/Gotham-Light.ttf) format("truetype"), url(/clientfonts/Gotham-Light.svg#Gotham-Light) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Gotham-Bold';
-  src: url(/clientfonts/Gotham-Bold.eot?#iefix) format("embedded-opentype"), url(/clientfonts/Gotham-Bold.woff) format("woff"), url(/clientfonts/Gotham-Bold.ttf) format("truetype"), url(/clientfonts/Gotham-Bold.svg#Gotham-Bold) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 body, html {
   padding: 0;
   margin: 0; }
@@ -60,22 +51,146 @@ body, html {
 body {
   background: #fff;
   font-family: 'Gotham-Medium';
-  color: #000; }
+  color: #000;
+  font-size: 16px;
+  line-height: 1.2; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 a {
   color: #fff;
   text-decoration: none; }
 
-header.home-header {
-  background: #000;
-  color: #fff; }
-  header.home-header a {
+header.site-header {
+  background: #fff;
+  color: #000;
+  padding: 15px 0; }
+  header.site-header .site-header-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  header.site-header a {
     color: #fff; }
+  header.site-header.home-header {
+    background: #000;
+    color: #fff; }
+  header.site-header .header-logo img {
+    display: block; }
+  header.site-header .header-nav {
+    margin-left: auto; }
+    header.site-header .header-nav ul {
+      list-style: none; }
+      header.site-header .header-nav ul li {
+        display: inline-block; }
+        header.site-header .header-nav ul li a {
+          display: block;
+          padding: 10px;
+          font-size: 15px; }
+
+footer#site-footer {
+  background: #000;
+  color: #fff;
+  font-family: "Muli"; }
+  footer#site-footer .footer-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 30px 0; }
+    footer#site-footer .footer-top .footer-left {
+      width: 210px; }
+    footer#site-footer .footer-top .footer-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      margin-left: auto;
+      width: 70%; }
+      footer#site-footer .footer-top .footer-right .footer-col {
+        width: 150px;
+        font-size: 13px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 10px;
+        position: relative; }
+        footer#site-footer .footer-top .footer-right .footer-col:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          height: 125px;
+          width: 1px;
+          background: #c6c6c6; }
+        footer#site-footer .footer-top .footer-right .footer-col:first-child:before {
+          display: none; }
+        footer#site-footer .footer-top .footer-right .footer-col .footer-col-heading {
+          color: #ffba03;
+          margin: 0 0 10px; }
+        footer#site-footer .footer-top .footer-right .footer-col .footer-col-list ul {
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+        footer#site-footer .footer-top .footer-right .footer-col .footer-col-list li a {
+          color: #fff;
+          padding: 5px 0;
+          display: block; }
+        footer#site-footer .footer-top .footer-right .footer-col .footer-social-list li {
+          display: inline-block; }
+          footer#site-footer .footer-top .footer-right .footer-col .footer-social-list li a {
+            font-size: 16px;
+            display: block;
+            padding: 5px 21px 5px 0;
+            width: 17px;
+            text-align: center; }
+  footer#site-footer .footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding: 10px 0 20px; }
+    footer#site-footer .footer-bottom .footer-right {
+      margin-left: auto;
+      color: #fff;
+      font-size: 11px; }
+      footer#site-footer .footer-bottom .footer-right p {
+        margin: 0; }
 
 nav#site-navigation {
   background: #131313; }
   nav#site-navigation.show {
     background: #ffba03; }
+
+.page-main {
+  min-height: 500px; }
 
 .single-category {
   display: -webkit-box;
