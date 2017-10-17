@@ -1,0 +1,43 @@
+.site-inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box; 
+    @media screen and (max-width: 1200px){
+      width: 100%;
+    }
+  }
+  
+  .clear{
+    clear:both;
+  }
+  
+  
+  .btn {
+    display:inline-block;
+    background-color: $yellow;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    color: #000;
+    padding: 10px;
+    transition: background-color 0.5s ease-out;
+    &:hover{
+      background-color: #F4A800;
+      transition: background-color 0.5s ease-in;
+    }
+  }
+  
+  .btn-2 {
+    background-color: $light-grey;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.5s ease-out;
+    &:hover{
+      background-color: $dark-grey;
+      transition: background-color 0.5s ease-in;
+    }
+  }
