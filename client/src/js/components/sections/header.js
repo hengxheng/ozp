@@ -1,14 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Link, withRouter } from "react-router-dom";
 import headerLogo from "../../../img/logo.png";
 
-export default class Header extends React.Component {
+import { connect } from "react-redux";
+import { changeState } from "../../actions/mainMenu";
+
+class Header extends React.Component {
     constructor(){
         super();
     }
 
-    render (){
+    changeMenuState(e){
+        e.preventDefault();
+        console.log("click");
+        console.log(this.props.menu.showMenu);
+        this.props.changeMenuState(this.props.menu.showMenu);
+    }
 
+    render(){
         return (
             <header className={ "site-header "+ (this.props.ifHome ? "home-header" : "") }>
                 <div className="site-inner">
@@ -20,7 +30,7 @@ export default class Header extends React.Component {
                             <ul>
                                 <li><a href="#" className="header-enquiry-btn">Enquire Now</a></li>
                                 <li><a href="#" id="nav-btn" 
-                                onClick = { () => this.props.changeMenu() } ><i className="fa fa-bars" aria-hidden="true"></i></a></li>
+                                onClick = { (e) => { this.changeMenuState(e)} } ><i className="fa fa-bars" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -29,3 +39,23 @@ export default class Header extends React.Component {
         );
     }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        menu: state.menuReducer
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeMenuState: (showMenu) => {
+            dispatch(changeState(showMenu));
+        }
+    };
+};
+
+
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(Header)
+);

@@ -151,9 +151,6 @@ footer#site-footer{
     justify-content: space-between;
     align-items: flex-end;
     padding: 10px 0 20px;
-    .footer-left{
-      
-    }
     .footer-right{
       margin-left: auto;
       color: #fff;
@@ -167,14 +164,25 @@ footer#site-footer{
 }
 
 nav#site-navigation{
+  position: fixed;
+  z-index: 90;
+  top:0;
+  right: 0;
+  width: 300px;
+  height: 100%;
   background: #131313;
+  box-sizing: border-box;
+  padding: 15px;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in;
   &.show{
-    background:  $yellow;
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
   }
 }
 
 .page-main{
-  min-height: 500px;
+  min-height: 620px;
 }
 
 .single-category{
