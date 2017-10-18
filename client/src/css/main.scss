@@ -8,12 +8,25 @@ body, html{
 
 body{
   background:#fff;
-  font-family: 'Gotham-Medium';
+  font-family: 'Muli', sans-serif;
   color:#000;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.2;
-  // background: url(../img/bg.jpg) no-repeat center center;
-  // background-size: cover;
+}
+
+h1{
+  font-family: 'Gotham-Bold';
+  font-size: 40px;
+}
+
+h2{
+  font-family: 'Gotham-Book';
+  font-size: 30px;
+}
+
+h3{
+  font-family: 'Gotham-Bold';
+  font-size: 18px;
 }
 
 ul{
@@ -262,6 +275,94 @@ nav#site-navigation{
 .page-main{
   min-height: 620px;
 }
+
+
+.home-banner{
+    background: url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: calc( 100vh - 66px);
+    .home-banner-wrapper{
+      display:flex;
+      flex-wrap:wrap;
+      height: 100%;
+      .site-inner{
+        align-self: center;
+      }
+    }
+
+    .home-hanner-inner{
+      text-align: center;
+      .home-banner-text{
+        color: #fff;
+        width: 60%;
+        margin: 0 auto 20px;
+        h1{
+          margin: 0 0 20px;
+          font-size: 44px;
+        }
+      }
+    }
+}
+
+.home-search-block{
+  #home-search{
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    .form-input-box{
+      border: 1px solid #c2c2c2;
+      width: 40%;
+      float:left;
+      background: #fff;
+      height: 65px;
+      &:first-child{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right:0;
+      }
+      &:nth-child(2){
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      
+      .form-label{
+        font-size: 14px;
+        text-align: left;
+        background: transparent;
+        padding: 3px 10px;
+      }
+      .form-element{
+        input{
+          border:0;
+          background: transparent;
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px;
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+    }
+    .form-submit-box{
+      height: 65px;
+      width: 18%;
+      float: right;
+      input[type="submit"]{
+        height: 100%;
+        width: 100%;
+        background: $yellow;
+        border:0;
+        border-radius: 5px;
+        color: #000;
+        font-size: 18px;
+        text-align: center;
+        line-height: 65px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
 
 .single-category{
   display: flex;

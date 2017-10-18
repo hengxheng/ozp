@@ -21,10 +21,7 @@ export default class App extends React.Component {
         return (
             <div className="container">
                 <Header ifHome = { this.ifHome() }/>
-
-                <div className="site-menu">
-                     <Navigation/> 
-                </div>
+                <Navigation/>
                 <div className="page-main">
                     { renderRoutes( this.props.route.routes )}
                 </div>
