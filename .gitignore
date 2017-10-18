@@ -1,4 +1,6 @@
 /node_modules
 /npm-debug.log
 /db
-/client/dist
+/client/dist/
+client/dist/bundle.js
+client/dist/main.css
