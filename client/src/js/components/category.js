@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import config from "../app_config";
 import { routeCodes } from "../routes";
 import axios from "axios";
+import { CategoryBox } from "./categoryBox";
 
 export default class Category extends React.Component {
     constructor(){
@@ -20,12 +21,16 @@ export default class Category extends React.Component {
     render() {
         return (
             <div className="category-page">
-                <h3>Category</h3>
-                <ul>
-                    { this.state.categories.map( (category, i) => {
-                        return <li key={i}><Link to={ `/category/${category.id}` }>{ category.name }</Link></li>
-                    })}
-                </ul>
+                <div className="site-inner">
+                    <h3>Category</h3>
+                    <div className="category-block">
+                        { this.state.categories.map( (category, i) => {
+                            // if(category.visible){
+                                return <CategoryBox key={i} category={category} />
+                            // }
+                        })}
+                    </div>
+                </div>
             </div>
         );
     }
