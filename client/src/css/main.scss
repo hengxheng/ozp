@@ -344,7 +344,7 @@ nav#site-navigation{
       }
     }
     .form-submit-box{
-      height: 65px;
+      height: 67px;
       width: 18%;
       float: right;
       input[type="submit"]{
@@ -355,8 +355,9 @@ nav#site-navigation{
         border-radius: 5px;
         color: #000;
         font-size: 18px;
+        font-weight: bold;
         text-align: center;
-        line-height: 65px;
+        line-height: 67px;
         box-sizing: border-box;
       }
     }

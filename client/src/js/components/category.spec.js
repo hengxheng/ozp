@@ -1,6 +1,14 @@
 import React from "react";
-import Category from "../src/js/components/category";
-import SingleCategory from "../src/js/components/SingleCategory";
+
+import Category from "./category";
+import SingleCategory from "./singleCategory";
+import chai from 'chai';
+import { shallow, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
+
+const expect = chai.expect;
+
+configure({ adapter: new Adapter() });
 
 describe('Category page', () => {
     const wrapper = shallow(<Category />);
@@ -16,11 +24,8 @@ describe('Single category page', () => {
     const wrapper = mount(<SingleCategory match = { {params:{ id: test_category_id } } }/>);
 
     it('should be the category single page', () => {
-        expect(wrapper.find(`div#${ test_category_id }.single-category`)).to.have.length(1);
+        expect(wrapper.find('div.single-category')).to.have.length(1);
+        expect(wrapper.find(`div#cat-${test_category_id}`)).to.have.length(1);
     });
-
-    // it('should has product box', () => {
-    //     expect(wrapper.find('div.productbox')).to.have.length(1);
-    // });
     
 });

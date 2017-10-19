@@ -4,7 +4,7 @@ import config from "../app_config";
 import axios from "axios";
 import { ProductBox } from "./product_box";
 
-export default class singleCategory extends React.Component{
+export default class SingleCategory extends React.Component{
     constructor(){
         super();
         this.state = { 
@@ -21,8 +21,9 @@ export default class singleCategory extends React.Component{
     }
 
     render() {
-        return (  
-            <div id={ this.props.match.params.id } className="single-category">
+        let sid = `cat-${this.props.match.params.id}`;
+        return ( 
+            <div id={ sid } className="single-category">
                 {
                     this.state.products.map( (p, key) => {
                         let thumbnail = (typeof(p.images[0])!=="undefined") ? p.images[0].itemUrl : null;
