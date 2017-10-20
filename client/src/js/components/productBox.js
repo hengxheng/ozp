@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { addToFav } from "../helper";
 
 export const ProductBox = (props) => {
     let imgStyle = {
@@ -30,7 +31,7 @@ export const ProductBox = (props) => {
             </Link>   
             <div className="product-box-meta">
                 from <span className="p-price">${ props.product.price }</span> 
-                <a href="#" className="add-to-fav"></a>
+                <a href="#" className="add-to-fav" onClick={ () => addToFav(props.product.id) } ></a>
             </div>   
         </div>
     );
