@@ -22,12 +22,16 @@ export default class Product extends React.Component {
     
     render() {
         return (
-            <div className="product-block">
-                <h1>{ this.state.product.name }</h1>
-                <div className="product-descript" dangerouslySetInnerHTML={ this.createRawHTML() } />
-                <div className="product-terms">
-                    <h2>Terms</h2>
-                    { this.state.product.terms }
+            <div className="product-page">
+                <div className="product-page-main">
+                    <div className="site-inner">
+                        <h1>{ this.state.product.name }</h1>
+                        <div className="product-descript" dangerouslySetInnerHTML={ this.createRawHTML() } />
+                        <div className="product-terms">
+                            <h2>Terms</h2>
+                            { this.state.product.terms }
+                        </div>
+                    </div>
                 </div>
             </div>
         );

@@ -5,6 +5,7 @@ import  Header  from "../components/sections/header";
 import  Navigation from "../components/sections/navigation";
 import Routes from "../routes";
 import { Footer } from "../components/sections/footer";
+import SiteHeader from "../components/sections/siteHeader";
 
 export default class App extends React.Component {
 
@@ -14,13 +15,17 @@ export default class App extends React.Component {
     }
 
     componentDidMount(){
-        
+        window.addEventListener('scroll', (e) => {
+            let top = window.pageYOffset || document.documentElement.scrollTop;
+            console.log(top);
+        }); 
     }
 
     render() {
         return (
-            <div className="container">
-                <Header ifHome = { this.ifHome() }/>
+            <div className={ (this.ifHome()) ? "container home-page":"container" } >
+                <Header/>
+                <SiteHeader/>
                 <Navigation/>
                 <div className="page-main">
                     { renderRoutes( this.props.route.routes )}
