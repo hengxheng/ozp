@@ -366,12 +366,14 @@ nav#site-navigation{
 
 .category-block{
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   .category-box{
-    width: calc(100%/6);
+    width: 180px;
+    border-bottom: 3px solid $yellow;
+    box-shadow: $boxShadow;
+    margin: 0px 7px 15px;
     .category-box-img{
-      height: 300px;
+      height: 185px;
       img{
         width: 100%;
         max-width: 100%;
@@ -388,17 +390,78 @@ nav#site-navigation{
 }
 
 .single-category{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  .product-box{
-    width: 33%;
-    .product-name{
-      font-size: 20px;
-      color:#fff;
+  .single-category-inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.product-box{
+  width: 250px;
+  margin: 0 10px 20px;
+  box-shadow: $boxShadow;
+  .product-img-box{
+    position: relative;
+    height: 270px;
+  }
+  .product-desc{
+    display:none;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #000;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    .p-name{
+      font-size: 18px;
+      font-family: 'Gotham-Bold';
+      margin:0 0 15px;
     }
-    img{
-      width: 100%;
+    .p-desc{
+      font-size: 15px;
     }
   }
+  .product-box-link:hover .product-desc{
+    display:block;
+  }
+  .product-name{
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    bottom:0;
+    z-index: 3;
+    font-size: 18px;
+    font-family: 'Gotham-Bold';
+    color:#fff;
+    background: linear-gradient(to bottom, transparent 0% transparent 20%, $dark-grey 100%);
+    box-sizing: border-box;
+    padding: 30px 15px 15px;
+  }
+  .product-box-meta{
+    padding: 8px 15px;
+    box-sizing: border-box;
+    font-size: 15px;
+    .p-price{
+      color: $light-blue;
+      font-weight: bold;
+    }
+    a.add-to-fav{
+      float:right;
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+
+a.add-to-fav{
+  color: #000;
 }

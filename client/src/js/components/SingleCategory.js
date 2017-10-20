@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import config from "../app_config";
 import axios from "axios";
-import { ProductBox } from "./product_box";
+import { ProductBox } from "./productBox";
 
 export default class SingleCategory extends React.Component{
     constructor(){
@@ -24,17 +24,24 @@ export default class SingleCategory extends React.Component{
         let sid = `cat-${this.props.match.params.id}`;
         return ( 
             <div id={ sid } className="single-category">
-                {
-                    this.state.products.map( (p, key) => {
-                        let thumbnail = (typeof(p.images[0])!=="undefined") ? p.images[0].itemUrl : null;
-                        let product = {
-                            id: p.productCode,
-                            name: p.name,
-                            image: thumbnail
+                <div className="site-inner">
+                    <div className="single-category-inner">
+                        {
+                            this.state.products.map( (p, key) => {
+                                console.log
+                                let thumbnail = (typeof(p.images[0])!=="undefined") ? p.images[0].itemUrl : null;
+                                let product = {
+                                    id: p.productCode,
+                                    name: p.name,
+                                    image: thumbnail,
+                                    desc: p.shortDescription,
+                                    price: p.advertisedPrice
+                                }
+                                return <ProductBox key={key} product={ product }/>
+                            })
                         }
-                        return <ProductBox key={key} product={ product }/>
-                    })
-                }
+                    </div>
+                </div>
             </div>
         )
     }
