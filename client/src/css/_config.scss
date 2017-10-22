@@ -100,3 +100,70 @@ span.cy{
     transition: background-color 0.5s ease-in;
   }
 }
+
+
+// -------sprite------------
+.bg-close {
+  width: 21px; height: 20px;
+  background: url('../img/css_sprites.png') -10px -80px;
+}
+
+.bg-down_large {
+  width: 21px; height: 20px;
+  background: url('../img/css_sprites.png') -51px -80px;
+}
+
+.bg-down_small {
+  width: 11px; height: 10px;
+  background: url('../img/css_sprites.png') -148px -120px;
+}
+
+.bg-left_small {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -45px -120px;
+}
+
+.bg-left_large {
+  width: 51px; height: 50px;
+  background: url('../img/css_sprites.png') -10px -10px;
+}
+
+.bg-like {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -152px -10px;
+}
+
+.bg-question {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -80px -120px;
+}
+
+.bg-question_hover {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -152px -80px;
+}
+
+.bg-reply {
+  width: 13px; height: 12px;
+  background: url('../img/css_sprites.png') -115px -120px;
+}
+
+.bg-right_large {
+  width: 51px; height: 50px;
+  background: url('../img/css_sprites.png') -81px -10px;
+}
+
+.bg-right_small {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -10px -120px;
+}
+
+.bg-wishlist_selected {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -152px -45px;
+}
+
+.bg-blog_like {
+  width: 15px; height: 15px;
+  background: url('../img/css_sprites.png') -92px -80px;
+}
