@@ -28,7 +28,6 @@ export default class SingleCategory extends React.Component{
                     <div className="single-category-inner">
                         {
                             this.state.products.map( (p, key) => {
-                                console.log
                                 let thumbnail = (typeof(p.images[0])!=="undefined") ? p.images[0].itemUrl : null;
                                 let product = {
                                     id: p.productCode,

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { addToFav, removeFromFav, checkFavExits } from "../helper";
+import { addToFav, removeFromFav, checkFavExits } from "../helperFav";
 
 export class ProductBox extends React.Component {
     constructor(){
@@ -23,16 +23,18 @@ export class ProductBox extends React.Component {
     
     updateFav(e, added, productCode){
         e.preventDefault();
-        if(this.state.fav_added){
+        if(added){
             removeFromFav(productCode);
             this.setState({
+                fav_added : !added,
                 fav_class : "add-to-fav",
             });
         }
         else{
             addToFav(productCode);
             this.setState({
-                fav_class : "add-to-fav added-to-fav",
+                fav_added : !added,
+                fav_class : "add-to-fav added-to-fav"
             });
         }
     };

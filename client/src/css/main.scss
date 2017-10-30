@@ -425,7 +425,7 @@ nav#site-navigation{
         font-size: 14px;
         text-align: left;
         background: transparent;
-        padding: 3px 10px;
+        padding: 5px 10px;
       }
       .form-element{
         input{
@@ -490,7 +490,14 @@ nav#site-navigation{
   .single-category-inner{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -10px;
   }
+}
+
+.my-favorite-inner{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
 }
 
 .product-box{
@@ -578,5 +585,97 @@ a.add-to-like{
   }
   &.added-to-like{
     background-position: -92px -80px;
+  }
+}
+
+.breadcrumb{
+  padding: 15px 0;
+  margin: 0 0 10px;
+  ul{
+    li{
+      display:inline-block;
+      font-size: 13px;
+      a{
+        color: $green;
+        text-decoration: underline;
+      }
+      &:after{
+        content: ">";
+        display:inline-block;
+        margin: 0 2px;
+      }
+      &:last-child:after{
+        display:none;
+      }
+    }
+  }
+}
+
+.with-left-column{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .sidebar-col{
+    width: 25%;
+  }
+  .main-with-sidebar{
+    width: 72%;
+  }
+}
+
+.fav-form{
+  .fav-form-title{
+    background: $green;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  .fav-form-body{
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid $light-grey;
+    border-top: 0;
+    h3{
+      font-size: 15px;
+      margin: 0 0 20px;
+    }
+  }
+}
+#favorite-form{
+  .form-row{
+    margin: 0 0 15px;
+    .DayPickerInput{
+      width:100%;
+    }
+    label{
+      font-weight: bold;
+      font-size: 15px;
+      display:block;
+      margin: 0 0 5px;
+    }
+    input, textarea{
+      font-size: 16px;
+      font-weight: 300;
+      padding: 5px 2px;
+      box-sizing:border-box;
+      width: 100%;
+      border:0;
+      border-bottom: 1px solid $light-grey;
+      input-placholder{
+        font-family: "Muli";
+        font-weight: 300;
+        color:#7e7e7e;
+      }
+    }
+    textarea{
+      border: 1px solid $light-grey;
+      height: 100px;
+    }
+    input[type="submit"]{
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 700;
+    }
   }
 }

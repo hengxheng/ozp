@@ -29,7 +29,7 @@ class Navigation extends React.Component{
                         <ul>
                             <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
                             <li><NavLink to="/category" activeClassName="active">Category</NavLink></li>
-                            <li><NavLink to="/product" activeClassName="active">Product</NavLink></li>
+                            <li><NavLink to="/my-favorite" activeClassName="active">My favorite</NavLink></li>
                         </ul>
                     </div>
                     <div className="site-nav-bottom">
