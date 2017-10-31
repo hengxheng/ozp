@@ -156,9 +156,15 @@ header.site-header.global{
 .container.home-page{
   header.site-header.home-header{
     display:block;
+    &.hide{
+      display:none;
+    }
   }
   .site-header.global{
     display:none;
+    &.nohide{
+      display:block;
+    }
   }
 }
 
@@ -437,7 +443,7 @@ nav#site-navigation{
 .home-banner{
     background: url(../img/bg.jpg) no-repeat center center;
     background-size: cover;
-    height: calc( 100vh - 66px);
+    height: 540px;
     .home-banner-wrapper{
       display:flex;
       flex-wrap:wrap;

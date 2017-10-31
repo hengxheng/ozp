@@ -14,11 +14,22 @@ export default class App extends React.Component {
         return (currentPath == "/") ? true:  ((currentPath == "/home") ? true : false);
     }
 
-    componentDidMount(){
+    componentDidMount(){   
         window.addEventListener('scroll', (e) => {
-            let top = window.pageYOffset || document.documentElement.scrollTop;
-            console.log(top);
-        }); 
+            if(this.ifHome()){
+                let top = window.pageYOffset || document.documentElement.scrollTop;
+                let homeHeader = document.querySelector(".home-header");
+                let siteHeader = document.querySelector(".global");
+                if(top>20){
+                    homeHeader.classList.add("hide");
+                    siteHeader.classList.add("nohide");
+                }
+                else{
+                    homeHeader.classList.remove("hide");
+                    siteHeader.classList.remove("nohide");
+                }
+            }
+        });
     }
 
     render() {
