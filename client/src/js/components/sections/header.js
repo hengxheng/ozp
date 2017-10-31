@@ -13,7 +13,7 @@ class Header extends React.Component {
 
     changeMenuState(e){
         e.preventDefault();
-        this.props.changeMenuState(this.props.menu.showMenu);
+        this.props.changeMenuState(this.props.header.showMenu);
     }
 
     render(){
@@ -28,7 +28,8 @@ class Header extends React.Component {
                             <ul>
                                 <li><a href="#" className="header-enquiry-btn">Enquire Now</a></li>
                                 <li><a href="#" className="nav-btn" 
-                                onClick = { (e) => { this.changeMenuState(e)} } ><i className="fa fa-bars" aria-hidden="true"></i></a></li>
+                                onClick = { (e) => { this.changeMenuState(e)} } ><i className="fa fa-bars" aria-hidden="true"></i>
+                                <span className="favCount">{ this.props.header.favCount }</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,7 +42,7 @@ class Header extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.HeaderReducer
+       header: state.HeaderReducer
     };
 };
 

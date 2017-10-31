@@ -74,9 +74,48 @@ header.site-header{
           padding: 10px;
           font-size: 15px;
           color: #000;
+          &.nav-btn{
+            display:inline-block;
+            position:relative;
+            font-size: 20px;
+            .favCount{
+              display:inline-block;
+              font-size:11px;
+              line-height: 18px;
+              width: 18px;
+              height:18px;
+              text-align: center;
+              border-radius: 50%;
+              background: $yellow;
+              color:#000;
+              position: absolute;
+              right: -4px;
+              top: 4px;
+            }
+          }
         }
       }
     }
+  }
+}
+
+#fav-link{
+  position: relative;
+  display:inline-block;
+  .favCount{
+    display:inline-block;
+    font-size:11px;
+    line-height: 18px;
+    width: 18px;
+    height:18px;
+    text-align: center;
+    border-radius: 50%;
+    background: $yellow;
+    color:#000;
+    position: absolute;
+    right: -21px;
+    top: -3px;
+    font-weight:normal;
   }
 }
 header.site-header.home-header{
@@ -112,6 +151,7 @@ header.site-header.global{
     }
   }
 }
+
 
 .container.home-page{
   header.site-header.home-header{

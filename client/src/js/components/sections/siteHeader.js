@@ -5,16 +5,22 @@ import axios from "axios";
 import LogoSmall from "../../../img/logo-s.png";
 import HeaderSearchForm from "./HeaderSearchForm";
 import { connect } from "react-redux";
-import { changeState } from "../../actions/HeaderAction";
+import { changeState, loadFavCount } from "../../actions/HeaderAction";
+import { getAllFav } from "../../helperFav";
 
 class SiteHeader extends React.Component {
     constructor(){
         super();
     }
 
+    componentDidMount(){
+        let favCount  = getAllFav();
+        this.props.loadFavCount(favCount.length);
+    }
+
     changeMenuState(e){
         e.preventDefault();
-        this.props.changeMenuState(this.props.menu.showMenu);
+        this.props.changeMenuState(this.props.header.showMenu);
     }
 
     render(){
@@ -29,8 +35,8 @@ class SiteHeader extends React.Component {
                         <div className="header-nav">
                             <ul>
                                 <li><a href="#" className="header-enquiry-btn">Enquire Now</a></li>
-                                <li><a href="#" id="nav-btn" 
-                                onClick = { (e) => { this.changeMenuState(e)} } ><i className="fa fa-bars" aria-hidden="true"></i></a></li>
+                                <li><a href="#" className="nav-btn" 
+                                onClick = { (e) => { this.changeMenuState(e)} } ><i className="fa fa-bars" aria-hidden="true"></i><span className="favCount">{ this.props.header.favCount }</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -43,7 +49,7 @@ class SiteHeader extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.HeaderReducer
+        header: state.HeaderReducer
     };
 };
 
@@ -51,6 +57,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         changeMenuState: (showMenu) => {
             dispatch(changeState(showMenu));
+        },
+        loadFavCount: (n) => {
+            dispatch(loadFavCount(n));
         }
     };
 };

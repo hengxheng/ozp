@@ -2,7 +2,8 @@ const INIT_STATE = {
     searchCategory: "",
     searchLocation: "",
     categoryList : [],
-    showMenu: false
+    showMenu: false,
+    favCount: 0
 }
 
 const HeaderReducer = (state = INIT_STATE, action) => {
@@ -26,6 +27,11 @@ const HeaderReducer = (state = INIT_STATE, action) => {
                 searchLocation: action.payload.searchLocation
             }
             break;
+        case "showFavCount":
+            state = {
+                ...state,
+                favCount: action.payload
+            }
     }
 
     return state;

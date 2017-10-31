@@ -21,3 +21,10 @@ export function updateSearchCategory(location, category){
         }
     }
 }
+
+export function loadFavCount(n){
+    return {
+        type: 'showFavCount',
+        payload: n
+    }
+}

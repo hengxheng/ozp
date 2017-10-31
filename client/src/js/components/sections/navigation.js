@@ -10,7 +10,7 @@ class Navigation extends React.Component{
 
     changeMenuState(e){
         e.preventDefault();
-        this.props.changeMenuState(this.props.menu.showMenu);
+        this.props.changeMenuState(this.props.header.showMenu);
     }
 
     componentWillReceiveProps(nextProps){
@@ -21,7 +21,7 @@ class Navigation extends React.Component{
 
     render(){
         let showMenu = "";
-        if(this.props.menu.showMenu){
+        if(this.props.header.showMenu){
             showMenu = "show";
         }
     
@@ -36,7 +36,7 @@ class Navigation extends React.Component{
                         <ul>
                             <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
                             <li><NavLink to="/category" activeClassName="active">Category</NavLink></li>
-                            <li><NavLink to="/my-favorite" activeClassName="active">My favorite</NavLink></li>
+                            <li><NavLink to="/my-favorite" activeClassName="active"><span id="fav-link">My Favourites<span className="favCount">{ this.props.header.favCount }</span></span></NavLink></li>
                         </ul>
                     </div>
                     <div className="site-nav-bottom">
@@ -65,7 +65,7 @@ class Navigation extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.HeaderReducer
+        header: state.HeaderReducer
     };
 };
 
