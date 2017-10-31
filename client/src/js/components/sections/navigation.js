@@ -14,9 +14,8 @@ class Navigation extends React.Component{
     }
 
     componentWillReceiveProps(nextProps){
-        console.log(nextProps);
         if(this.props.location.pathname != nextProps.location.pathname){
-            this.props.changeMenuState(this.props.menu.showMenu);
+            this.props.changeMenuState(true);
         }
     }
 
