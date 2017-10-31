@@ -14,13 +14,25 @@ const HomeSearchForm = (props) => {
                 </div>
                 <div className="form-element">
                 <ReactAutocomplete id="search-location" inputProps={{ placeholder: 'e.g.Sydney'  }}
-                wrapperStyle={{display: 'block'}}
+                    wrapperStyle={{
+                        display: 'block',
+                        position: 'relative'
+                    }}
                     items={[
                         { id: 'sydney', label: 'Sydney' },
                         { id: 'melbourne', label: 'Melbourne' }
                     ]}
                     getItemValue={item => item.label}
-                    renderItem={(item, highlighted) =>
+                    menuStyle={{
+                        position: 'absolute',
+                        top: '40px',
+                        left: '0px',
+                        background: '#fff',
+                        overflow: 'auto',
+                        maxHeight: '400px',
+                        minWidth: '300px'
+                    }}
+                    renderItem={(item, highlighted) => 
                     <div
                         key={item.id}
                         style={{ 
@@ -49,29 +61,41 @@ const HomeSearchForm = (props) => {
                 </div>
                 <div className="form-element">
                 <ReactAutocomplete id="search-cat" inputProps={{ placeholder: 'e.g.Hens night'  }}
-                        wrapperStyle={{display: 'block'}}
-                            items={ props.header.categoryList }
-                            getItemValue={item => item.name}
-                            renderItem={(item, highlighted) =>
-                            <div
-                                key={item.id}
-                                style={{ 
-                                    backgroundColor: highlighted ? '#ffba03' : 'transparent',
-                                    fontSize: '18px',
-                                    padding: '10px',
-                                    textAlign: 'left'
-                                }}
-                            >
-                                {item.name}
-                            </div>
-                            }
-                            value={ props.header.searchCategory }
-                            onChange={(e) => {
-                                props.loadParam(props.header.searchLocation, e.target.value);
-                            }}
-                            onSelect={(value) => {
-                                props.loadParam(props.header.searchLocation, value)
-                            }}
+                    wrapperStyle={{
+                        display: 'block',
+                        position: 'relative'
+                    }}
+                    items={ props.header.categoryList }
+                    getItemValue={item => item.name}
+                    menuStyle={{
+                        position: 'absolute',
+                        top: '40px',
+                        left: '0px',
+                        background: '#fff',
+                        overflow: 'auto',
+                        maxHeight: '400px',
+                        minWidth: '300px'
+                    }}
+                    renderItem={(item, highlighted) =>
+                    <div
+                        key={item.id}
+                        style={{ 
+                            backgroundColor: highlighted ? '#ffba03' : 'transparent',
+                            fontSize: '18px',
+                            padding: '10px',
+                            textAlign: 'left'
+                        }}
+                    >
+                        {item.name}
+                    </div>
+                    }
+                    value={ props.header.searchCategory }
+                    onChange={(e) => {
+                        props.loadParam(props.header.searchLocation, e.target.value);
+                    }}
+                    onSelect={(value) => {
+                        props.loadParam(props.header.searchLocation, value)
+                    }}
                     />
                 </div>
             </div>
