@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
 import LogoSmall from "../../../img/logo-s.png";
-
+import HeaderSearchForm from "./HeaderSearchForm";
 import { connect } from "react-redux";
-import { changeState } from "../../actions/mainMenu";
+import { changeState } from "../../actions/HeaderAction";
 
 class SiteHeader extends React.Component {
     constructor(){
@@ -24,19 +25,7 @@ class SiteHeader extends React.Component {
                         <div className="header-logo">
                             <Link to="/"><img src={ LogoSmall } alt="OzParty" /></Link>
                         </div>
-                        <div id="header-search">
-                            <form id="header-search-form" action="">
-                                <div className="search-box-1">
-                                    <input type="text" name="location" value="" placeholder="e.g. Sydney" />
-                                </div>
-                                <div className="search-box-2">
-                                    <input id="search-cat" type="text" name="cat" value="" placeholder="e.g. Hens night" />
-                                </div>
-                                <div className="search-box-3">
-                                    <input type="submit" value="Search"/>
-                                </div>
-                            </form>
-                        </div>
+                        <HeaderSearchForm/>
                         <div className="header-nav">
                             <ul>
                                 <li><a href="#" className="header-enquiry-btn">Enquire Now</a></li>
@@ -54,7 +43,7 @@ class SiteHeader extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.menuReducer
+        menu: state.HeaderReducer
     };
 };
 

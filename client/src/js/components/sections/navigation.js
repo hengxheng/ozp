@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { changeState } from "../../actions/mainMenu";
+import { changeState } from "../../actions/HeaderAction";
 
 class Navigation extends React.Component{
     constructor(){
@@ -56,7 +56,7 @@ class Navigation extends React.Component{
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.menuReducer
+        menu: state.HeaderReducer
     };
 };
 

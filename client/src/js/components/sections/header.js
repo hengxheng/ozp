@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 import headerLogo from "../../../img/logo.png";
 
 import { connect } from "react-redux";
-import { changeState } from "../../actions/mainMenu";
+import { changeState } from "../../actions/HeaderAction";
 
 class Header extends React.Component {
     constructor(){
@@ -41,7 +41,7 @@ class Header extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        menu: state.menuReducer
+        menu: state.HeaderReducer
     };
 };
 
