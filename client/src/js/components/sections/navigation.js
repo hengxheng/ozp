@@ -13,6 +13,13 @@ class Navigation extends React.Component{
         this.props.changeMenuState(this.props.menu.showMenu);
     }
 
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps);
+        if(this.props.location.pathname != nextProps.location.pathname){
+            this.props.changeMenuState(this.props.menu.showMenu);
+        }
+    }
+
     render(){
         let showMenu = "";
         if(this.props.menu.showMenu){
@@ -20,6 +27,7 @@ class Navigation extends React.Component{
         }
     
         return (
+            <div className="nav-wrapper">
             <nav id="site-navigation" className={`site-navigation ${showMenu}` }>
                 <div className="site-nav-inner">
                     <div className="site-nav-header">
@@ -50,6 +58,8 @@ class Navigation extends React.Component{
                     </div>
                 </div>
             </nav>
+            <div id="nav-overlap" className={showMenu}  onClick={ (e) => {this.changeMenuState(e)} }></div>
+            </div>
         );
     }
 }
