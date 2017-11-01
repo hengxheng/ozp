@@ -169,6 +169,10 @@ header.site-header.global{
   }
 }
 
+#home-page{
+  overflow: hidden;
+}
+
 #header-search{
   #header-search-form{
     overflow: hidden;
@@ -822,6 +826,70 @@ a.add-to-like{
       button{
         background: $yellow;
       }
+    }
+  }
+}
+
+#WhyChooseUs{
+  position: fixed;
+  top: 30%;
+  left:0;
+  width: 560px;
+  transform: translateX(-559px);
+  transition: transform 1s ease-in;
+  z-index: 99;
+  .wcu-title{
+    background: $orange;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 216px;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+    position: absolute;
+    top: -41px;
+    right: -40px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+    h2{
+      margin: 0;
+      font-size: 18px;
+    }
+    img{
+      float:right;
+      transform: rotate(-90deg);
+      margin: 3px;
+    }
+  }
+  .wcu-content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 35px 25px;
+    height: 216px;
+    box-shadow: 0px 0px 7px 0px rgba(20, 20, 20, 0.94);
+    .wcu-box{
+      display:inline-block;
+      width: 32%;
+      text-align: center;
+      img{
+        display:inline-block;
+        margin: 0 0 10px;
+      }
+      h3{
+        margin:0;
+      }
+    }
+  }
+  &.opened{
+    transform: translateX(0);
+    transition: transform 1s ease-in;
+    .wcu-title img{
+      transform-origin: center center;
+      transform: rotate(90deg);
     }
   }
 }

@@ -3,6 +3,7 @@ import ReactAutocomplete from "react-autocomplete";
 import HomeSearchForm from "./sections/HomeSearchForm";
 import CategoryStrip from "./CategoryStrip";
 import ReviewStrip from "./ReviewStrip";
+import WhyChooseUs from "./sections/WhyChooseUs";
 
 export default class Home extends React.Component {
     constructor(){
@@ -15,6 +16,7 @@ export default class Home extends React.Component {
     render() {
         return (
             <div id="home-page">
+                <WhyChooseUs/>
                 <div className="home-banner">
                     <div className="home-banner-wrapper">
                         <div className="site-inner">   

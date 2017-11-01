@@ -37,7 +37,6 @@ export default class ReviewStrip extends React.Component{
 
     render() {
         var settings = {
-            dots: true,
             infinite: true,
             speed: 2000,
             slidesToShow: 1,
@@ -54,7 +53,7 @@ export default class ReviewStrip extends React.Component{
                         <Slider {...settings}>
                         {   
                             this.state.reviews.map( (r, key) => {
-                                return <div><ReviewBox key={key} review={r} /></div>
+                                return <div key={key}><ReviewBox key={key} review={r} /></div>
                             })
                         }
                         </Slider>
