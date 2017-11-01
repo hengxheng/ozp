@@ -24,7 +24,7 @@ class CategoryStrip extends React.Component {
                             return <CategoryBox key={i} category={category} />
                         })}
                         <div className="category-box yourown">
-                            <Link to={ "#" }>
+                            <Link to={ "/buildyourown" }>
                                 <div className="category-box-inner">
                                     <img src={ BuildOwn } alt="Build your own"/>
                                     <div className="category-box-name">Build your own</div>

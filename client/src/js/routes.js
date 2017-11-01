@@ -5,6 +5,7 @@ import Product from './components/product';
 import singleCategory from './components/singleCategory';
 import NotFound from './components/notfound';
 import MyFav from './components/MyFav';
+import BuildYourOwn from './components/BuildYourOwn';
 
 export const routes = [
     {
@@ -37,6 +38,10 @@ export const routes = [
             {
                 path: '/my-favorite',
                 component: MyFav
+            },
+            {
+                path: '/buildyourown',
+                component: BuildYourOwn
             },
             {
                 path: "*",
