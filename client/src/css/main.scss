@@ -49,6 +49,7 @@ header.site-header{
   right:0;
   height: 73px;
   box-sizing: border-box;
+  z-index:88;
   .header-enquiry-btn{
     text-decoration: underline;
   }
@@ -467,6 +468,13 @@ nav#site-navigation{
     }
 }
 
+.section-title{
+  font-family: 'Gotham-Book';
+  font-size: 30px;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
 .home-search-block{
   #home-search{
     width: 80%;
@@ -526,6 +534,17 @@ nav#site-navigation{
   }
 }
 
+.category-strip{
+  padding: 50px 0;
+  min-height: 700px;
+  @media screen and (max-width: 700px){
+    min-height: 0;
+  }
+}
+.cta-block{
+  margin: 30px 0 0;
+  text-align: center;
+}
 .category-block{
   display: flex;
   flex-wrap: wrap;
@@ -547,6 +566,20 @@ nav#site-navigation{
       text-align: center;
       color: #000;
       box-sizing: border-box;
+    }
+    &.yourown{
+      background: #efefef;
+      text-align: center;
+      .category-box-inner{
+        padding-top: 35%;
+        img{
+          margin: 0 0 10px;
+        }
+        .category-box-name{
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
@@ -742,6 +775,53 @@ a.add-to-like{
       font-size: 18px;
       padding: 10px 0;
       font-weight: 700;
+    }
+  }
+}
+
+#homeReview{
+  background: $green;
+  padding: 50px 0;
+  text-align: center;
+  color:#fff;
+  .review-box-inner{
+    width: 60%;
+    margin: 0 auto 25px;
+    font-size: 15px;
+    .review-box-img{
+      display:inline-block;
+      width: 80px;
+      height:80px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      margin: 0 0 25px;
+    }
+    .review-box-name{
+      margin: 0 0 25px;
+    }
+    @media screen and (max-width: 700px){
+      width: 90%;
+    }
+  }
+}
+
+.sliderDots{
+  li{
+    display:inline-block;
+    margin: 3px;
+    button{
+      display:block;
+      width: 15px;
+      height: 15px;
+      background: transparent;
+      border: 1px solid #000;
+      border-radius: 50%;
+      font-size:0;
+    }
+    &.slick-active{
+      button{
+        background: $yellow;
+      }
     }
   }
 }

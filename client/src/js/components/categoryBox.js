@@ -3,13 +3,9 @@ import { Link } from "react-router-dom";
 
 export const CategoryBox = (props) => {
     let imgStyle = {
-        background: '#c6c6c6'
-    };
-    if(props.category.image != null){
-        imgStyle = {
-            background: `url(${props.category.image.itemUrl}) no-repeat center center #c6c6c6`,
-            backgroundSize: 'cover'
-        }
+        backgroundColor: '#efefef',
+        background: `url(${props.category.image.itemUrl}) no-repeat center center #efefef`,
+        backgroundSize: 'cover'
     }
 
     return (

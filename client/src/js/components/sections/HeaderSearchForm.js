@@ -16,12 +16,10 @@ class HeaderSearchForm extends React.Component{
             let cat = [];
             res.data.map( (i) => {
                 // if(i.visible){
-                    cat.push({ 
-                        id: i.id,
-                        name: i.name
-                    });
+                    cat.push(i);
                 // }
             });
+            // load all category data into global state for global usage
             this.props.loadCategories(cat);
         });
     }

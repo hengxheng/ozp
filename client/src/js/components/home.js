@@ -2,6 +2,8 @@ import React from "react";
 import ReactAutocomplete from "react-autocomplete";
 import HomeSearchForm from "./sections/HomeSearchForm";
 import CategoryStrip from "./CategoryStrip";
+import ReviewStrip from "./ReviewStrip";
+
 export default class Home extends React.Component {
     constructor(){
         super();
@@ -27,6 +29,7 @@ export default class Home extends React.Component {
                     </div>
                 </div>
                 <CategoryStrip/>
+                <ReviewStrip/>
             </div>
         );
     }

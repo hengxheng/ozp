@@ -4,34 +4,48 @@ import config from "../app_config";
 import { routeCodes } from "../routes";
 import axios from "axios";
 import { CategoryBox } from "./categoryBox";
+import { connect } from "react-redux";
+import BuildOwn from "../../img/buildown.png";
 
-export default class CategoryStrip extends React.Component {
+
+class CategoryStrip extends React.Component {
     constructor(){
         super();
-        this.state = { categories: [] }
-    }
-
-    componentDidMount(){
-        axios.get(`/api/category`)
-        .then(result => {
-            this.setState( { categories: result.data} ); 
-        });
     }
 
     render() {
+        const homeCategory = (this.props.categories != null)? this.props.categories.slice(0,11): [];
         return (
-            <div className="category-page">
+            <div className="category-strip">
                 <div className="site-inner">
-                    <h3>We can help if you are looking for...</h3>
+                    <h3 className="section-title">We can help if you are looking for...</h3>
                     <div className="category-block">
-                        { this.state.categories.map( (category, i) => {
-                            // if(category.visible){
-                                return <CategoryBox key={i} category={category} />
-                            // }
+                        { homeCategory.map( (category, i) => {
+                            return <CategoryBox key={i} category={category} />
                         })}
+                        <div className="category-box yourown">
+                            <Link to={ "#" }>
+                                <div className="category-box-inner">
+                                    <img src={ BuildOwn } alt="Build your own"/>
+                                    <div className="category-box-name">Build your own</div>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="cta-block">
+                        <a href="#" className="btn-2">Enquire Now</a>
                     </div>
                 </div>
             </div>
         );
     }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        categories: state.HeaderReducer.categoryList
+    }
+}
+
+export default connect(mapStateToProps)(CategoryStrip)
