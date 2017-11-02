@@ -472,6 +472,10 @@ nav#site-navigation{
     }
 }
 
+
+.home-section{
+  padding: 50px 0;
+}
 .section-title{
   font-family: 'Gotham-Book';
   font-size: 30px;
@@ -610,6 +614,9 @@ nav#site-navigation{
   .product-img-box{
     position: relative;
     height: 270px;
+    img{
+      width: 100%;
+    }
   }
   .product-desc{
     display:none;
@@ -664,8 +671,23 @@ nav#site-navigation{
       float:right;
     }
   }
-  img{
-    width: 100%;
+  
+  &.custom-product{
+    .custom-product-inner{
+      height: 270px;
+      text-align: center;
+      padding-top:30%;
+      box-sizing: border-box;
+      h2{
+        font-size: 18px;
+        color: #000;
+        font-family: 'Gotham-Bold';
+      }
+      img{
+        width: auto;
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -890,6 +912,37 @@ a.add-to-like{
     .wcu-title img{
       transform-origin: center center;
       transform: rotate(90deg);
+    }
+  }
+}
+
+.home-partners{
+  text-align: center;
+  img{
+    max-width: 100%;
+  }
+}
+
+.popularPackages-strip{
+  background: #efefef;
+  .popularPackages-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 40px;
+    .popularSlider{
+      width: calc(100% / 3 * 2);
+    }
+    .slick-slider{
+      position: static;
+    }
+    .sliderDots{
+      position: absolute;
+      width:100%;
+      left:0;
+      bottom:0;
+      text-align: center;
     }
   }
 }

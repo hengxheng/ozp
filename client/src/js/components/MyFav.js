@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as myFav from "../helperFav";
 import axios from "axios";
-import { ProductBox } from "./productBox";
+import { ProductBox } from "./ProductBox";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import 'react-day-picker/lib/style.css';
 
 export default class MyFav extends React.Component{
     constructor(){
         super();
-        this.state = { 
+        this.state = {
             fav: []
         }
     }

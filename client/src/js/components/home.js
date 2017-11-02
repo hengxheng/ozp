@@ -4,6 +4,8 @@ import HomeSearchForm from "./sections/HomeSearchForm";
 import CategoryStrip from "./CategoryStrip";
 import ReviewStrip from "./ReviewStrip";
 import WhyChooseUs from "./sections/WhyChooseUs";
+import HomeParnterImg from "../../img/home-partners.png";
+import PopularPackages from "./PopularPackages";
 
 export default class Home extends React.Component {
     constructor(){
@@ -31,7 +33,14 @@ export default class Home extends React.Component {
                     </div>
                 </div>
                 <CategoryStrip/>
-                <ReviewStrip/>
+                {<ReviewStrip/>}
+                <div className="home-partners home-section">
+                    <div className="site-inner">
+                        <h3 className="section-title">Snapshot of Our Partners</h3>
+                        <img src={HomeParnterImg} alt="Our partners"/>    
+                    </div>
+                </div>
+                <PopularPackages/>
             </div>
         );
     }
