@@ -4,3 +4,5 @@
 /client/dist/
 client/dist/bundle.js
 client/dist/main.css
+config.js
+client/src/js/app_config.js

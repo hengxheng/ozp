@@ -6,6 +6,8 @@ import ReviewStrip from "../components/ReviewStrip";
 import WhyChooseUs from "../components//WhyChooseUs";
 import HomeParnterImg from "../../img/home-partners.png";
 import PopularPackages from "../components/PopularPackages";
+import HomeBlog from "../components/HomeBlog";
+import SocialStrip from "../components/SocialStrip";
 
 export default class Home extends React.Component {
     constructor(){
@@ -41,6 +43,8 @@ export default class Home extends React.Component {
                     </div>
                 </div>
                 <PopularPackages/>
+                <HomeBlog/>
+                <SocialStrip/>
             </div>
         );
     }
