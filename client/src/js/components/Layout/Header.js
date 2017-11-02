@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
 import headerLogo from "../../../img/logo.png";
-
 import { connect } from "react-redux";
 import { changeState } from "../../actions/HeaderAction";
 

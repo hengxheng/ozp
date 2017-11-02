@@ -1,7 +1,7 @@
 import React from "react";
 
-import Category from "./category";
-import SingleCategory from "./singleCategory";
+import Category from "./CategoryPage";
+import SingleCategory from "./SingleCategoryPage";
 import chai from 'chai';
 import { shallow, mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-15';

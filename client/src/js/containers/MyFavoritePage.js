@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as myFav from "../helperFav";
 import axios from "axios";
-import { ProductBox } from "./ProductBox";
+import { ProductBox } from "../components/ProductBox";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import 'react-day-picker/lib/style.css';
 

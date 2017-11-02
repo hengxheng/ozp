@@ -1,11 +1,11 @@
 import AppRoot from './containers/app';
-import Home from './components/home';
-import Category from './components/category';
-import Product from './components/product';
-import singleCategory from './components/singleCategory';
-import NotFound from './components/notfound';
-import MyFav from './components/MyFav';
-import BuildYourOwn from './components/BuildYourOwn';
+import Home from './containers/HomePage';
+import Category from './containers/CategoryPage';
+import Product from './containers/ProductPage';
+import singleCategory from './containers/SingleCategoryPage';
+import NotFound from './containers/NotFoundPage';
+import MyFav from './containers/MyFavoritePage';
+import BuildYourOwn from './containers/BuildYourOwnPage';
 
 export const routes = [
     {

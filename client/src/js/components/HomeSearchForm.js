@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios";
 import { connect } from "react-redux";
 import ReactAutocomplete from "react-autocomplete";
-import { updateSearchCategory } from "../../actions/HeaderAction";
+import { updateSearchCategory } from "../actions/HeaderAction";
 
 const HomeSearchForm = (props) => {
     return (

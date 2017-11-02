@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { renderRoutes } from 'react-router-config';
-import  Header  from "../components/sections/header";
-import  Navigation from "../components/sections/navigation";
+import  Header  from "../components/Layout/Header";
+import  Navigation from "../components/Layout/Navigation";
 import Routes from "../routes";
-import { Footer } from "../components/sections/footer";
-import SiteHeader from "../components/sections/siteHeader";
+import { Footer } from "../components/Layout/Footer";
+import SiteHeader from "../components/Layout/SiteHeader";
 
 export default class App extends React.Component {
 

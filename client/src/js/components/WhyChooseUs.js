@@ -1,8 +1,8 @@
 import React from 'react';
-import date_change from '../../../img/date_change.png';
-import event_planning from '../../../img/event_planning.png';
-import payment from '../../../img/payment.png';
-import arrowIcon from '../../../img/left_small.png';
+import date_change from '../../img/date_change.png';
+import event_planning from '../../img/event_planning.png';
+import payment from '../../img/payment.png';
+import arrowIcon from '../../img/left_small.png';
 
 export default class WhyChooseUs extends React.Component {
     constructor(){

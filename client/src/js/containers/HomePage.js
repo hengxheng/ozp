@@ -1,11 +1,11 @@
 import React from "react";
 import ReactAutocomplete from "react-autocomplete";
-import HomeSearchForm from "./sections/HomeSearchForm";
-import CategoryStrip from "./CategoryStrip";
-import ReviewStrip from "./ReviewStrip";
-import WhyChooseUs from "./sections/WhyChooseUs";
+import HomeSearchForm from "../components/HomeSearchForm";
+import CategoryStrip from "../components/CategoryStrip";
+import ReviewStrip from "../components/ReviewStrip";
+import WhyChooseUs from "../components//WhyChooseUs";
 import HomeParnterImg from "../../img/home-partners.png";
-import PopularPackages from "./PopularPackages";
+import PopularPackages from "../components/PopularPackages";
 
 export default class Home extends React.Component {
     constructor(){

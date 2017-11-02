@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import config from "../app_config";
 import { routeCodes } from "../routes";
 import axios from "axios";
-import { CategoryBox } from "./categoryBox";
+import { CategoryBox } from "./CategoryBox";
 import { connect } from "react-redux";
 import BuildOwn from "../../img/buildown.png";
 

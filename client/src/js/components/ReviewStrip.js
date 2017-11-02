@@ -18,7 +18,7 @@ export default class ReviewStrip extends React.Component{
         let _reviews = [
             { 
                 name: "Bella Osborne",
-                content: "OZ Party Events - Best Events Company Ever!”I came across Oz Party events on an online search one day and have found their service unbeatable in terms of creating bespoke corporate and individual events. I have used OZ."
+                content: "OZ Party Events - Best Events Company Ever! I came across Oz Party events on an online search one day and have found their service unbeatable in terms of creating bespoke corporate and individual events. I have used OZ."
             },
             {
                 name: "test 1",
@@ -26,7 +26,7 @@ export default class ReviewStrip extends React.Component{
             },
             {
                 name: "test 2",
-                content: "Best Events Company Ever!”I came across Oz Party events on an online search one day and have found their service unbeatable in terms of creating bespoke corporate and individual events. I have used OZ."
+                content: "Best Events Company Ever! I came across Oz Party events on an online search one day and have found their service unbeatable in terms of creating bespoke corporate and individual events. I have used OZ."
             }
         ];
 
