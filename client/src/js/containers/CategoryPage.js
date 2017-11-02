@@ -6,8 +6,8 @@ import axios from "axios";
 import { CategoryBox } from "../components/CategoryBox";
 
 export default class Category extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = { categories: [] }
     }
 

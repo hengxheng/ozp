@@ -9,8 +9,8 @@ import { changeState, loadFavCount } from "../../actions/HeaderAction";
 import { getAllFav } from "../../helperFav";
 
 class SiteHeader extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     componentDidMount(){

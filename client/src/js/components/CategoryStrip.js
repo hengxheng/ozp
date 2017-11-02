@@ -9,8 +9,8 @@ import BuildOwn from "../../img/buildown.png";
 
 
 class CategoryStrip extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     render() {

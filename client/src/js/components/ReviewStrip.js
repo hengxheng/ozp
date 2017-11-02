@@ -7,8 +7,8 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 
 export default class ReviewStrip extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             reviews: []
         }

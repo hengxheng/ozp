@@ -5,8 +5,8 @@ import payment from '../../img/payment.png';
 import arrowIcon from '../../img/left_small.png';
 
 export default class WhyChooseUs extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             opened: ""
         }

@@ -3,8 +3,8 @@ import config from "../app_config";
 import axios from "axios";
 
 export default class Product extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = { product: {} }
     }
 

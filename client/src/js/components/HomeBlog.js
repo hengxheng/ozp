@@ -2,8 +2,8 @@ import React from 'react';
 import BlogBox from './BlogBox';
 
 export default class HomeBlog extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             blogs:[]
         }

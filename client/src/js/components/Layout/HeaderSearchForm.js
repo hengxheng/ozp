@@ -5,8 +5,8 @@ import ReactAutocomplete from "react-autocomplete";
 import { loadSearchCategory,  updateSearchCategory } from "../../actions/HeaderAction";
 
 class HeaderSearchForm extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     componentDidMount(){

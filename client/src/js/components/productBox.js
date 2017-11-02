@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { addToFav, removeFromFav, checkFavExits } from "../helperFav";
 
 export class ProductBox extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             fav_class : "add-to-fav",
             fav_added : false

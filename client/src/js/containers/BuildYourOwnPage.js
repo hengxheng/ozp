@@ -1,8 +1,8 @@
 import React from 'react';
 
 export default class BuildYourOwn extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     render() {

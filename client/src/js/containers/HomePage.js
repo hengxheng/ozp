@@ -10,8 +10,8 @@ import HomeBlog from "../components/HomeBlog";
 import SocialStrip from "../components/SocialStrip";
 
 export default class Home extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             isLoading: true,
 

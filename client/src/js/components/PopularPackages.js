@@ -8,8 +8,8 @@ import 'slick-carousel/slick/slick.css';
 import BuildOwn from "../../img/buildown.png";
 
 export default class PopularPackages extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             products: []
         }

@@ -6,8 +6,8 @@ import { connect } from "react-redux";
 import { changeState } from "../../actions/HeaderAction";
 
 class Header extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
 
     changeMenuState(e){
