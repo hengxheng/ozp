@@ -23,7 +23,7 @@ export const getSocialFeed = (res) => {
             const t = new Date(i.created_time*1000);
             let formatted = moment(t).format("MMM DD, YYYY hh:MM:ss");
             let _ins = {
-                type: "instagrem",
+                type: "instagram",
                 image: i.images.low_resolution.url,
                 date: formatted
             }
