@@ -3,6 +3,7 @@ const router = express.Router();
 
 import { getProduct, getProducts, getProductByCategory } from './product';
 import { getCategory, getCategories } from './category';
+import { getSocialFeed } from './SocialFeed';
 
 router.use(function(req, res, next) {
     // do logging
@@ -32,6 +33,10 @@ router.get('/category/:categoryId', (req, res) => {
 
 router.get('/category/product/:categoryId', (req, res) => {
     getProductByCategory(res, req.params.categoryId);
+});
+
+router.get('/social', (req, res) => {
+    getSocialFeed(res);
 });
 
 

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --require babel-register --timeout 30000",
     "start": "webpack && nodemon index.js",
+    "server-start": "nodemon index.js",
     "server": "nodemon --inspect --debug-brk index.js",
     "react-test": "mocha --compilers js:babel-register --reporter spec ./client/test/testSetup.js \"client/src/js/components/*.spec.js\""
   },
@@ -17,6 +18,8 @@
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.4",
+    "instagram-node": "^0.5.8",
+    "moment": "^2.19.1",
     "mongoose": "^4.12.1",
     "morgan": "^1.8.2",
     "nodemailer": "^4.3.1",
@@ -33,6 +36,7 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "slick-carousel": "^1.8.1",
+    "twitter": "^1.7.1",
     "universal-cookie": "^2.1.0"
   },
   "devDependencies": {
