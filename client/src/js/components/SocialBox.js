@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SocialBox = (props) => {
-    console.log(props.sfeed.type);
     if(props.sfeed.type == "instagram"){
         let imgStyle = {
             background: `url(${props.sfeed.image}) no-repeat center center`,

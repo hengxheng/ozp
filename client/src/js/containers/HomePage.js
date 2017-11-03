@@ -8,6 +8,7 @@ import HomeParnterImg from "../../img/home-partners.png";
 import PopularPackages from "../components/PopularPackages";
 import HomeBlog from "../components/HomeBlog";
 import SocialStrip from "../components/SocialStrip";
+import FooterContact from "../components/FooterContact";
 
 export default class Home extends React.Component {
     constructor(props){
@@ -45,6 +46,7 @@ export default class Home extends React.Component {
                 <PopularPackages/>
                 <HomeBlog/>
                 <SocialStrip/>
+                <FooterContact/>
             </div>
         );
     }

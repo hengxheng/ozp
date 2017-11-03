@@ -1049,3 +1049,51 @@ a.add-to-like{
     }
   }
 }
+
+#FooterContact{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Gotham-Book';
+  .rac-wrapper{
+    display:inline-block;
+    margin: 0 10px;
+    input{
+      border:0;
+      border-bottom: 1px solid $light-grey;
+      font-size: 30px;
+      font-family: 'Gotham-Book';
+      text-align: center;
+      input-placeholder{
+        font-size: 30px;
+        font-family: 'Gotham-Book';
+        color:$light-grey;
+      }
+    }
+  }
+  .fc-section{
+    display:none;
+    &.show{
+      display:block;
+    }
+    .fc-content{
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .fc-cta{
+      padding: 25px 0;
+      .btn{
+        padding: 13px 40px;
+      }
+    }
+  }
+  #step1{
+    input{
+      width: 200px;
+    }
+  }
+  #step2{
+    input{
+      width: 90px;
+    }
+  }
+}

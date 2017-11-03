@@ -6,11 +6,19 @@ import axios from "axios";
 import { CategoryBox } from "./CategoryBox";
 import { connect } from "react-redux";
 import BuildOwn from "../../img/buildown.png";
-
+import scrollToElement from 'scroll-to-element';
 
 class CategoryStrip extends React.Component {
     constructor(props){
         super(props);
+    }
+
+    scrollToForm(e){
+        e.preventDefault();
+        scrollToElement('#FooterContact', {
+            offset: 0,
+            duration: 1000
+        });
     }
 
     render() {
@@ -33,7 +41,7 @@ class CategoryStrip extends React.Component {
                         </div>
                     </div>
                     <div className="cta-block">
-                        <a href="#" className="btn-2">Enquire Now</a>
+                        <a href="#" className="btn-2" onClick={ (e) => this.scrollToForm(e) }>Enquire Now</a>
                     </div>
                 </div>
             </div>

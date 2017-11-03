@@ -881,7 +881,7 @@ a.add-to-like {
 
 #WhyChooseUs {
   position: fixed;
-  top: 30%;
+  top: 20%;
   left: 0;
   width: 560px;
   -webkit-transform: translateX(-559px);
@@ -1021,6 +1021,98 @@ a.add-to-like {
 
 .SocialStrip {
   background: #efefef; }
+  .SocialStrip .SocialStrip-inner .slick-prev {
+    width: 51px;
+    height: 50px;
+    background: url(/clientimg/css_sprites.png) -10px -10px transparent;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 90;
+    border: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .SocialStrip .SocialStrip-inner .slick-next {
+    width: 51px;
+    height: 50px;
+    background: url(/clientimg/css_sprites.png) -81px -10px transparent;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 90;
+    border: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+
+.SocialBoxWrapper {
+  text-align: center; }
+  .SocialBoxWrapper .SocialBox {
+    display: inline-block;
+    width: 300px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5); }
+    .SocialBoxWrapper .SocialBox .SocialBox-date {
+      font-size: 16px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: left;
+      background: #fff; }
+      .SocialBoxWrapper .SocialBox .SocialBox-date i {
+        margin-right: 10px;
+        font-size: 21px; }
+      .SocialBoxWrapper .SocialBox .SocialBox-date span {
+        vertical-align: top; }
+    .SocialBoxWrapper .SocialBox .SocialBox-content {
+      background: #fff;
+      color: #000;
+      width: 100%;
+      height: 300px;
+      font-size: 16px;
+      text-align: left;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 25px; }
+      .SocialBoxWrapper .SocialBox .SocialBox-content h3 {
+        font-family: 'Gotham-Bold';
+        font-size: 18px;
+        margin: 0 0 15px; }
+
+#FooterContact {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Gotham-Book'; }
+  #FooterContact .rac-wrapper {
+    display: inline-block;
+    margin: 0 10px; }
+    #FooterContact .rac-wrapper input {
+      border: 0;
+      border-bottom: 1px solid #c6c6c6;
+      font-size: 30px;
+      font-family: 'Gotham-Book';
+      text-align: center; }
+      #FooterContact .rac-wrapper input input-placeholder {
+        font-size: 30px;
+        font-family: 'Gotham-Book';
+        color: #c6c6c6; }
+  #FooterContact .fc-section {
+    display: none; }
+    #FooterContact .fc-section.show {
+      display: block; }
+    #FooterContact .fc-section .fc-content {
+      padding: 15px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    #FooterContact .fc-section .fc-cta {
+      padding: 25px 0; }
+      #FooterContact .fc-section .fc-cta .btn {
+        padding: 13px 40px; }
+  #FooterContact #step1 input {
+    width: 200px; }
+  #FooterContact #step2 input {
+    width: 90px; }
 /* Slider */
 .slick-slider {
   position: relative;
