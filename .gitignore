@@ -2,7 +2,8 @@
 /npm-debug.log
 /db
 /client/dist/
-client/dist/bundle.js
-client/dist/main.css
+/client/dist/bundle.js
+/client/dist/main.css
 config.js
-client/src/js/app_config.js
+/client/src/js/app_config.js
+/.vscode

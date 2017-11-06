@@ -8,8 +8,33 @@ class FooterContact extends React.Component{
         super(props);
         this.state={
             isSent: false,
-            step: 1
+            step: 1,
+            formValue: {
+                occation:"",
+                email:"",
+                call:"",
+                message:""
+            }
+
         }
+    }
+
+    handleChange(e){
+        const form = this.state.formValue;
+        const value = e.target.value;
+        const name = e.target.name;
+        Object.assign(form, { [name] : value });
+        this.setState({
+            formValue: form
+        });
+    }
+
+    handleSelect(value){
+        const form = this.state.formValue;
+        Object.assign(form, { occation : value });
+        this.setState({
+            formValue: form
+        });
     }
 
     handleClick(e, step){
@@ -22,6 +47,7 @@ class FooterContact extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
+        console.log(this.state.formValue);
     }
 
     render(){
@@ -63,12 +89,12 @@ class FooterContact extends React.Component{
                                             {item.name}
                                         </div>
                                         }
-                                        value={ this.props.header.searchCategory }
+                                        value={ this.state.formValue.occation }
                                         onChange={(e) => {
-                                            this.props.loadParam(this.props.header.searchLocation, e.target.value);
+                                            this.handleChange(e);
                                         }}
                                         onSelect={(value) => {
-                                            this.props.loadParam(this.props.header.searchLocation, value)
+                                            this.handleSelect(value);
                                         }}
                                     />
                             </div>
@@ -81,11 +107,11 @@ class FooterContact extends React.Component{
                         <div className="fc-content">
                             You can reach me via 
                             <div className="rac-wrapper">
-                                <input type="text" name="fc-email" placeholder="email"/>
+                                <input type="text" name="email" placeholder="email" onChange={ (e) => this.handleChange(e) }/>
                             </div>
                             or
                             <div className="rac-wrapper">
-                                <input type="text" name="fc-phone" placeholder="call"/>
+                                <input type="text" name="phone" placeholder="call" onChange={ (e) => this.handleChange(e) }/>
                             </div>.
                         </div>
                         <div className="fc-cta">
@@ -95,7 +121,7 @@ class FooterContact extends React.Component{
                     <div id="step3" className={ this.state.step==3 ? "fc-section show": "fc-section"}>
                         <div className="fc-content">
                             <div className="rac-wrapper">
-                               <input type="text" name="message" placeholder="Tell us more"/>
+                               <input type="text" name="message" placeholder="Tell us more" onChange={ (e) => this.handleChange(e) }/>
                             </div>
                         </div>
                         <div className="fc-cta">
