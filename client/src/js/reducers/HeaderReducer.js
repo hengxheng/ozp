@@ -1,7 +1,8 @@
 const INIT_STATE = { 
     searchCategory: "",
     searchLocation: "",
-    categoryList : [],
+    categoryList: [],
+    categoryLoaded: false,
     showMenu: false,
     favCount: 0
 }
@@ -17,7 +18,8 @@ const HeaderReducer = (state = INIT_STATE, action) => {
         case "loadSearchCategory":
             state = {
                 ...state,
-                categoryList: action.payload
+                categoryList: action.payload,
+                categoryLoaded: true
             }
             break;
         case "updateSearchCategory":

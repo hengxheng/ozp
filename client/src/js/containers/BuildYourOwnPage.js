@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSliderContainer from "./HeroSliderContainer";
 
 export default class BuildYourOwn extends React.Component{
     constructor(props){
@@ -8,7 +9,10 @@ export default class BuildYourOwn extends React.Component{
     render() {
         return (
             <div className="buildyouown-page">
-                <h1>Build Your Own</h1>
+                <HeroSliderContainer sliderName="buildown"/>
+                <div className="site-inner">
+                    <h1>Build Your Own</h1>
+                </div>
             </div>
         )
     }

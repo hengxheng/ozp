@@ -35,7 +35,7 @@ class Navigation extends React.Component{
                     <div className="site-nav-middle">
                         <ul>
                             <li><NavLink to="/home" activeClassName="active">Home</NavLink></li>
-                            <li><NavLink to="/category" activeClassName="active">Category</NavLink></li>
+                            {/* <li><NavLink to="/category" activeClassName="active">Category</NavLink></li> */}
                             <li><NavLink to="/my-favorite" activeClassName="active"><span id="fav-link">My Favourites<span className="favCount">{ this.props.header.favCount }</span></span></NavLink></li>
                         </ul>
                     </div>

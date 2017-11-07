@@ -15,6 +15,7 @@ export default class Category extends React.Component {
         axios.get(`/api/category`)
         .then(result => {
             this.setState( { categories: result.data} ); 
+            console.log(result.data);
         });
     }
 
