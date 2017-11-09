@@ -1134,3 +1134,20 @@ a.add-to-like{
     text-align: center;
   }
 }
+
+.loading-overlay{
+  background: url(../img/opz_loading.gif);
+  background-color: #000;
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  z-index: 99;
+  display:block;
+  &.hide{
+    display:none;
+  }
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 import { connect } from "react-redux";
 import ReactAutocomplete from "react-autocomplete";
 import { loadSearchCategory,  updateSearchCategory } from "../../actions/HeaderAction";
@@ -7,21 +6,6 @@ import { loadSearchCategory,  updateSearchCategory } from "../../actions/HeaderA
 class HeaderSearchForm extends React.Component{
     constructor(props){
         super(props);
-    }
-
-    componentDidMount(){
-        axios.get(`/api/category`)
-        .then(res => {
-            let _cat = res.data;
-            let cat = [];
-            res.data.map( (i) => {
-                // if(i.visible){
-                    cat.push(i);
-                // }
-            });
-            // load all category data into global state for global usage
-            this.props.loadCategories(cat);
-        });
     }
 
     render(){

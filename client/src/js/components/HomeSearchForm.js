@@ -30,7 +30,7 @@ const HomeSearchForm = (props) => {
                         background: '#fff',
                         overflow: 'auto',
                         maxHeight: '400px',
-                        minWidth: '300px'
+                        width: '100%'
                     }}
                     renderItem={(item, highlighted) => 
                     <div
@@ -74,7 +74,7 @@ const HomeSearchForm = (props) => {
                         background: '#fff',
                         overflow: 'auto',
                         maxHeight: '400px',
-                        minWidth: '300px'
+                        width: '100%'
                     }}
                     renderItem={(item, highlighted) =>
                     <div

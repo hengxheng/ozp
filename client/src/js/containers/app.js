@@ -1,13 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { renderRoutes } from 'react-router-config';
-import  Header  from "../components/Layout/Header";
-import  Navigation from "../components/Layout/Navigation";
+import Header  from "../components/Layout/Header";
+import Navigation from "../components/Layout/Navigation";
 import Routes from "../routes";
-import { Footer } from "../components/Layout/Footer";
+import Footer from "../components/Layout/Footer";
 import SiteHeader from "../components/Layout/SiteHeader";
+import LoadingOver from "../components/Layout/LoadingOver";
+import axios from "axios";
+import { connect } from "react-redux";
+import { loadSearchCategory,  updateSearchCategory } from "../actions/HeaderAction";
 
-export default class App extends React.Component {
+class App extends React.Component {
+
+    constructor(props){
+        super(props);
+    }
 
     ifHome(){
         let currentPath = this.props.location.pathname;
@@ -15,6 +23,19 @@ export default class App extends React.Component {
     }
 
     componentDidMount(){   
+        axios.get(`/api/category`)
+        .then(res => {
+            let _cat = res.data;
+            let cat = [];
+            res.data.map( (i) => {
+                // if(i.visible){
+                    cat.push(i);
+                // }
+            });
+            // load all category data into global state for global usage
+            this.props.loadCategories(cat);
+        });
+
         window.addEventListener('scroll', (e) => {
             if(this.ifHome()){
                 let top = window.pageYOffset || document.documentElement.scrollTop;
@@ -42,7 +63,27 @@ export default class App extends React.Component {
                     { renderRoutes( this.props.route.routes )}
                 </div>
                 <Footer/>
+                <LoadingOver loading={this.props.header.categoryLoaded}/>
             </div>
         );
     }
 } 
+
+const mapStateToProps = (state) => {
+    return {
+        header: state.HeaderReducer
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadCategories: (categories) =>{
+            dispatch(loadSearchCategory(categories))
+        },
+        loadParam: (location, category) => {
+            dispatch(updateSearchCategory(location, category))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

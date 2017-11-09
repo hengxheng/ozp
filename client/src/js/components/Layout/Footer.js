@@ -4,7 +4,7 @@ import ewayImage from "../../../img/verified-seal.png";
 import headerLogo from "../../../img/logo.png";
 import awardImage from "../../../img/award.png";
 
-export const Footer = (props) => {
+const Footer = (props) => {
     return (
         <footer id="site-footer" className="site-footer">
             <div className="big-site-inner">
@@ -96,3 +96,5 @@ export const Footer = (props) => {
         </footer>
     );
 }
+
+export default Footer;

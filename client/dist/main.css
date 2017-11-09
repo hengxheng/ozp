@@ -1113,6 +1113,36 @@ a.add-to-like {
     width: 200px; }
   #FooterContact #step2 input {
     width: 90px; }
+
+.HeroSlider {
+  position: relative; }
+  .HeroSlider .HeroSliderItem {
+    width: 100%;
+    height: 400px; }
+    .HeroSlider .HeroSliderItem .site-inner {
+      height: 100%; }
+    .HeroSlider .HeroSliderItem .HeroSliderItem-inner {
+      position: relative;
+      height: 100%; }
+      .HeroSlider .HeroSliderItem .HeroSliderItem-inner .HeroSliderItem-content {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        left: 0;
+        right: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%); }
+        .HeroSlider .HeroSliderItem .HeroSliderItem-inner .HeroSliderItem-content .HeroSliderItem-content-inner {
+          width: 60%;
+          margin: 0 auto; }
+  .HeroSlider .sliderDots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 15px;
+    text-align: center; }
 /* Slider */
 .slick-slider {
   position: relative;
