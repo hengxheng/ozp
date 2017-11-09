@@ -1136,7 +1136,7 @@ a.add-to-like{
 }
 
 .loading-overlay{
-  background: url(../img/opz_loading.gif);
+  background: url(../img/opz_loading.gif) no-repeat center center;
   background-color: #000;
   position:fixed;
   left:0;
