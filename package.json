@@ -8,7 +8,8 @@
     "start": "webpack && nodemon index.js",
     "server-start": "nodemon index.js",
     "server": "nodemon --inspect --debug-brk index.js",
-    "react-test": "mocha --compilers js:babel-register --reporter spec ./client/test/testSetup.js \"client/src/js/components/*.spec.js\""
+    "react-test": "mocha --compilers js:babel-register --reporter spec ./client/test/testSetup.js \"client/src/js/components/*.spec.js\"",
+    "deploy": "webpack -p --config webpack.production.config.js"
   },
   "keywords": [],
   "author": "",

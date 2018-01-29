@@ -53,7 +53,7 @@ export class ProductBox extends React.Component {
         }
 
         return (
-            <div id={ this.props.product.id }className="product-box">
+            <div id={ this.props.product.id } className="product-box">
                 <Link className="product-box-link" to={ `/product/${this.props.product.id}` }>
                     <div className="product-img-box" style={ imgStyle }>
                         <div className="product-name">{ this.props.product.name }</div>

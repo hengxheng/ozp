@@ -5,7 +5,8 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
-const isDeveloping = process.env.NODE_ENV !== 'production';
+// const isDeveloping = process.env.NODE_ENV !== 'production';
+const isDeveloping =false;
 
 const api = require('./routes/api');
 
