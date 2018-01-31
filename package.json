@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha --require babel-register --timeout 30000",
-    "start": "webpack && nodemon index.js",
+    "start": "webpack&set NODE_ENV=dev&nodemon index.js",
     "server-start": "nodemon index.js",
     "server": "nodemon --inspect --debug-brk index.js",
     "react-test": "mocha --compilers js:babel-register --reporter spec ./client/test/testSetup.js \"client/src/js/components/*.spec.js\"",
