@@ -4,6 +4,7 @@ const router = express.Router();
 import { getProduct, getProducts, getProductByCategory } from './product';
 import { getCategory, getCategories } from './category';
 import { getSocialFeed } from './SocialFeed';
+import {  getHomeBlog } from './HomeBlog';
 
 router.use(function(req, res, next) {
     // do logging
@@ -39,5 +40,8 @@ router.get('/social', (req, res) => {
     getSocialFeed(res);
 });
 
+router.get('/homeblog', (req, res) => {
+    getHomeBlog(res);
+});
 
 module.exports = router; 

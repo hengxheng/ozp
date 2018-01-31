@@ -1,5 +1,7 @@
 import React from 'react';
 import BlogBox from './BlogBox';
+import config from '../config';
+import axios from "axios";
 
 export default class HomeBlog extends React.Component{
     constructor(props){
@@ -7,25 +9,17 @@ export default class HomeBlog extends React.Component{
         this.state={
             blogs:[]
         }
+        console.log(config.drupal_url);
     }
 
     componentDidMount(){
-        let _blogs = [
-            {
-                name: "Why A Cruise Event Should Be On Your Sydney Bucket List",
-                cat: "Blog",
-                image: ""
-            },
-            {
-                name: "10 Amazing School Formal Venues In Sydney",
-                cat: "Blog",
-                image: ""
-            },
-        ];
 
-        this.setState({
-            blogs: _blogs
-        });
+        axios.get(`/api/homeblog`)
+        .then(res => {
+            this.setState({
+                blogs: res.data
+            });
+        });        
     }
     
     render(){

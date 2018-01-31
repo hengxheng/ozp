@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import config from "../app_config";
 import axios from "axios";
 import { ProductBox } from "./ProductBox";
 import Slider from "react-slick";

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import config from "../app_config";
 import { routeCodes } from "../routes";
 import axios from "axios";
 import { CategoryBox } from "./CategoryBox";

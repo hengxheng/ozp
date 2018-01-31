@@ -5,7 +5,8 @@ const config = {
     consumer_secret: 'Lr93QHyxzBw5BDhFDaLdkWTH3IPYenRY1x3sSbJwkphq7f3C8S',
     access_token_key: '186710354-2HiKat5HP5Fh8R0udR5N6W6m59gOHxabKAYvvThp',
     access_token_secret: 'J7N7sly87vELGMKGaYBo3Z4xlGPv3AZSSid2usmiRGt2s',
-    remote_url: ""
+    remote_url: "",
+    drupal_url: "http://13.210.131.34:3333/"
 }
 
 module.exports = config;
