@@ -80,7 +80,7 @@ export const getProductFromDrupal = (res, productCode="") => {
     })
     .then(response => {
         res.setHeader('Content-Type', 'application/json');
-        res.json(response.data);
+        res.json(response.data[0]);
     })
     .catch(error => {
         console.log(error);
