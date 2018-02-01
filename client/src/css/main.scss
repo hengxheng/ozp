@@ -1151,3 +1151,112 @@ a.add-to-like{
     display:none;
   }
 }
+
+.product-page{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  h2{
+    font-size: 22px;
+  }
+  .product-page-main{
+    width: 65%;
+    .tab-wrapper{
+      .tab-header{
+        border-bottom: 1px solid #c6c6c6;
+        margin: 0 0 20px;
+        ul{
+          li{
+            display:inline-block;
+            a{
+              display:block;
+              padding: 10px;
+              color: #000;
+              font-size: 18px;
+              position: relative;
+              &.actived{
+                font-weight: bold;
+                &:after{
+                  content: "";
+                  position: absolute;
+                  left:0;
+                  right:0;
+                  width: 100%;
+                  height: 4px;
+                  background: $yellow;
+                  bottom: -2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .tab-content{
+        padding: 25px 0;
+        font-size: 15px;
+        display:none;
+        &.show{
+          display:block;
+        }
+        p{
+          margin: 0 0 12px;
+        }
+      }
+    }
+  }
+}
+
+.accordion-block{
+  margin: 15px 0;
+  .accordion-header{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background: #efefef;
+    box-sizing: border-box;
+    transition: all 1s linear;
+    &:first-child{
+      margin-top: 25px;
+    }
+    &:after{
+      content: ">";
+      float: right;
+      margin-right: 10px;
+      transform: rotate(-90deg);
+      transition: all 1s linear;
+    }
+    &.show{
+      background: #c6c6c6;
+      transition: all 1s linear;
+      &:after{
+        transform: rotate(90deg);
+        transition: all 1s linear;
+      } 
+    }
+  }
+  .accordion-body{
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    max-height: 0;
+    transition: all 1s linear;
+    overflow-y: hidden;
+    &:before{
+      content:"";
+      display:block;
+      width: 100%;
+      height: 15px;
+    }
+    &:after{
+      content:"";
+      display:block;
+      width: 100%;
+      height: 15px;
+    }
+    &.show{
+      transition: all 1s linear;
+      max-height: 600px;
+    }
+  }
+}
