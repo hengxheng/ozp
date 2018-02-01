@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-import { getProduct, getProducts, getProductByCategory } from './Product';
+import { getProduct, getProducts, getProductByCategory, getProductFromDrupal } from './Product';
 import { getCategory, getCategories } from './Category';
 import { getSocialFeed } from './SocialFeed';
-import {  getHomeBlog } from './HomeBlog';
+import { getHomeBlog } from './HomeBlog';
 
 router.use(function(req, res, next) {
     // do logging
@@ -44,8 +44,8 @@ router.get('/homeblog', (req, res) => {
     getHomeBlog(res);
 });
 
-router.get('/product_du/:productCode', (req, res)=> {
-
+router.get('/package/:productCode', (req, res)=> {
+    getProductFromDrupal(res, req.params.productCode);
 });
 
 // router.get('/blog/:blogId')

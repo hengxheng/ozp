@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
-import config from "../config";
 
 export default class Product extends React.Component {
     constructor(props){
         super(props);
-        this.state = { product: {},
-                        body: "" }
+        this.state = { 
+                        product: {},
+                        body: {} 
+                    }
     }
 
     componentDidMount(){
@@ -14,6 +15,11 @@ export default class Product extends React.Component {
         axios.get(`/api/product/${code}`)
         .then(result => {
             this.setState( { product: result.data } ); 
+        });
+
+        axios.get(`/api/package/${code}`)
+        .then(result => {
+            this.setState( { body: result.data} ); 
         });
     }
 

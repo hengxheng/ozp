@@ -1,7 +1,6 @@
 import axios from 'axios'; 
 import config from '../config';
 
-
 export const getHomeBlog = (res) => {
     const url = `${config.drupal_url}home_blogs`;
     axios.get(url, {
