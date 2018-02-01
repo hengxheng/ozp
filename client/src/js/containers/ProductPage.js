@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
+import config from "../config";
 
 export default class Product extends React.Component {
     constructor(props){
         super(props);
-        this.state = { product: {} }
+        this.state = { product: {},
+                        body: "" }
     }
 
     componentDidMount(){
@@ -18,12 +20,19 @@ export default class Product extends React.Component {
     createRawHTML(){
         return { __html: this.state.product.description }
     }
+
+    bodyHTMLFromDrupal(){
+        return { __html: this.state.body }
+    }
     
     render() {
         return (
             <div className="product-page">
                 <div className="product-page-main">
                     <div className="site-inner">
+                        <div className="product-content">
+
+                        </div>
                         <h1>{ this.state.product.name }</h1>
                         <div className="product-descript" dangerouslySetInnerHTML={ this.createRawHTML() } />
                         <div className="product-terms">

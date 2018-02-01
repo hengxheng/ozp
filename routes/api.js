@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-import { getProduct, getProducts, getProductByCategory } from './product';
-import { getCategory, getCategories } from './category';
+import { getProduct, getProducts, getProductByCategory } from './Product';
+import { getCategory, getCategories } from './Category';
 import { getSocialFeed } from './SocialFeed';
 import {  getHomeBlog } from './HomeBlog';
 
@@ -43,5 +43,11 @@ router.get('/social', (req, res) => {
 router.get('/homeblog', (req, res) => {
     getHomeBlog(res);
 });
+
+router.get('/product_du/:productCode', (req, res)=> {
+
+});
+
+// router.get('/blog/:blogId')
 
 module.exports = router; 
