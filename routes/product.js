@@ -69,3 +69,20 @@ export const getProductByCategory = (res, categoryId) => {
         console.log(error);
     });
 };
+
+export const getProductFromDrupal = (res, productCode="") => {
+    const url = `${config.drupal_url}package/${productCode}`;
+    axios.get(url, {
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        res.setHeader('Content-Type', 'application/json');
+        res.json(response.data[0]);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}

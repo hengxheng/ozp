@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import { createLogger } from 'redux-logger'
-import menuReducer from './reducers/menuReducer';
+import HeaderReducer from './reducers/HeaderReducer';
 import userReducer from "./reducers/userReducer";
 
 export default () => {
@@ -19,7 +19,7 @@ export default () => {
 
     store = createStore(
         combineReducers({
-            menuReducer,
+            HeaderReducer,
             userReducer
         }),
         { },
